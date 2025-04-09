@@ -1,0 +1,8 @@
+假設 
+有一個普通cnn 可能是一個 resnet 5 (比較少 用作平衡比較是展現優異性）
+另外一個大模型  M可能是diffusion/ transformers 或者其他新的架構 
+這個模型會把CNN weigh 的過往歷史作為紀錄 
+進行輸入 然後輸出下一次回合的CNN weigh 
+,每次更新的時候就只會更新M的weight 
+所以這個M學到如何更新別人的weight 
+而且從m到cnn 這個過程是可未分 loss以及gradient 可以到達 
